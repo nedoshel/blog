@@ -1,0 +1,14 @@
+/.bundle
+/vendor/bundle
+/public/system
+/db/*.sqlite3
+/config/development.sphinx.conf
+/db/sphinx
+/log
+/tmp
+/.idea
+*~
+/db/schema.rb
+/.sass-cache
+/public/assets*
+/public/ckeditor_assets*

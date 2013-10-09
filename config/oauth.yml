@@ -1,0 +1,7 @@
+development: &defaults
+  vkontakte:
+    app_id: 111111
+    app_secret: app_secret
+  twitter:
+    consumer_key: 7FnBYKLNJWDcQMFVO87Q
+    consumer_secret: 0CrjoTLfG3wOQIC0avacTaF8gpgEEbKDxkAAzO4

@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Blog
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    - if current_user
+      .usr-info{style: "padding-bottom: 10px;"}
+        = "Вы вошли как #{current_user.login}"
+        = link_to "Выход", destroy_user_session_path, method: :delete
+      %br 
+    - if flash[:notice]
+      .help-notice= flash[:notice]
+      %br
+    - if flash[:error]
+      - flash[:error].each do |error|
+        .help-error= error
+        %br    
+    = yield

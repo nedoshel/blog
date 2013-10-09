@@ -1,0 +1,14 @@
+.post-form
+  %h3 Добавить пост
+  = form_for post do |f|
+    = f.label :title
+    = f.text_field :title
+    %br
+    = f.label :file_url
+    = f.text_field :file_url
+    %br
+    = f.label :context
+    = f.text_area :context, rows: 5
+    %br
+    = f.submit :save
+    %br

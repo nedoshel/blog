@@ -1,0 +1,15 @@
+- @posts.each do |post|
+  .post-block{style: "padding: 10px;"}
+    .img{style: "float: left;"}= image_tag(post.image.url(:thumb)) if post.image.exists?
+    .context{style: "float: left; padding-left: 10px;"}
+      .ttl= post.title
+      .txt= post.context
+      .usr= post.user.login
+      .date= post.created_at.strftime("%d.%m.%Y %H:%M")
+  .clear{style: "margin: 0; padding: 0;  border: 0;  font-size: 100%; font: inherit; vertical-align: baseline; clear:both;"}
+= will_paginate(@pages)
+%hr
+- if current_user
+  = render partial: "shared/forms/post", locals: { post: @post }
+- else
+  = render partial: "shared/login"
